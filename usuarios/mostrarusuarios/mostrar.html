@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reportes</title>
+		<link rel="stylesheet" href="mostrarstyles.css" />
+	</head>
+	<body>
+		<div class="form-busqueda">
+			<div><label for="">Buscar</label><input type="text" id="buscar" /></div>
+			<select id="tipoBusqueda">
+				<option value="cedula">Cédula</option>
+				<option value="nombre">Nombre</option>
+			</select>
+			<button id="btnBuscar">Buscar</button>
+		</div>
+		<div class="listas">
+			<ul id="lista"></ul>
+		</div>
+
+		<!-- Modal de edición -->
+		<div class="modal-overlay" id="modalEditar">
+			<div class="modal-content">
+				<h2>Editar Usuario</h2>
+				<form id="formEditar">
+					<div class="form-group">
+						<label for="editCedula">Cédula</label>
+						<input type="text" id="editCedula" required />
+					</div>
+					<div class="form-group">
+						<label for="editNombre">Nombre</label>
+						<input type="text" id="editNombre" required />
+					</div>
+					<div class="form-group">
+						<label for="editApellido">Apellido</label>
+						<input type="text" id="editApellido" required />
+					</div>
+					<div class="form-group">
+						<label for="editEmail">Email</label>
+						<input type="email" id="editEmail" required />
+					</div>
+					<div class="form-group">
+						<label for="editTel">Teléfono</label>
+						<input type="tel" id="editTel" required />
+					</div>
+					<div class="form-group">
+						<label for="editSexo">Sexo</label>
+						<select id="editSexo" required>
+							<option value="Masculino">Masculino</option>
+							<option value="Femenino">Femenino</option>
+							<option value="Otro">Otro</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="editTipo">Tipo</label>
+						<select id="editTipo" required>
+							<option value="Admin">Admin</option>
+							<option value="Usuario">Usuario</option>
+						</select>
+					</div>
+					<div class="modal-buttons">
+						<button type="submit" class="btn-guardar">Guardar Cambios</button>
+						<button type="button" class="btn-cancelar" id="btnCancelar">Cancelar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="mostrar.js"></script>
+	</body>
+</html>
